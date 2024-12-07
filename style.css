@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+.navbar {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px;
+    background: linear-gradient(45deg, #0066cc, #33ccff);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(45deg, #0055b3, #00b3e6);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: hidden;
+}
+
+form, #resumePreview {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form:hover, #resumePreview:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border: 1px solid #33ccff;
+    box-shadow: 0 0 5px rgba(51, 204, 255, 0.5);
+    outline: none;
+}
+
+#generateResume {
+    width: 100%;
+    padding: 14px;
+    background-color: #33ccff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#generateResume:hover {
+    background-color: #00b3e6;
+    transform: scale(1.05);
+}
+
+#resumePreview {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#resumePreview h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+#output {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#output div {
+    margin-bottom: 20px;
+}
+
+#output div strong {
+    font-weight: bold;
+    color: #33ccff;
+}
+
+#output div span {
+    color: #666;
+}
+
+#output button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 12px 25px;
+    transition: background-color 0.3s ease;
+}
+
+#output button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 600px) {
+    .navbar {
+        font-size: 28px;
+        padding: 18px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #generateResume {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #resumePreview {
+        padding: 20px;
+    }
+
+    #output button {
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 12px 25px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        font-size: 32px;
+    }
+
+    form input {
+        font-size: 15px;
+    }
+
+    #generateResume {
+        font-size: 17px;
+    }
+
+    #resumePreview {
+        padding: 25px;
+    }
+
+    #output button {
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 12px 25px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        font-size: 34px;
+    }
+
+    form input {
+        font-size: 16px;
+    }
+
+    #generateResume {
+        font-size: 16px;
+    }
+
+    #resumePreview {
+        padding: 30px;
+    }
+
+    #output button {
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 12px 25px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+@media (min-width: 1281px) {
+    .navbar {
+        font-size: 38px;
+        padding: 30px;
+    }
+
+    form input {
+        font-size: 18px;
+    }
+
+    #generateResume {
+        font-size: 18px;
+    }
+
+    #resumePreview {
+        padding: 40px;
+    }
+
+    #output button {
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 12px 25px;
+        transition: background-color 0.3s ease;
+    }
+}
